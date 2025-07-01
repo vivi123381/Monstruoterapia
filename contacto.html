@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monstruoterapia: Contacto</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+	h2 {
+  color: #00e5ff;
+  font-style: italic;
+  text-align: center;
+}
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #e64a19;
+            padding: 1.5em;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 1.8em;
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            margin-top: 1em;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.6em;
+            margin-top: 0.3em;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        input[type="submit"] {
+            background-color: #bf360c;
+            color: white;
+            border: none;
+            padding: 0.75em 1.5em;
+            font-size: 1.1em;
+            margin-top: 1.5em;
+            cursor: pointer;
+            border-radius: 4px;
+            display: block;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #9a2c08;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📞 Contacto y Emergencias</h1>
+        <p><strong><em>Estamos aquí para ayudarte, monstruo valiente</em></strong></p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="monstruo-button">Inicio</a>
+        <a href="quienes-somos.html" class="monstruo-button">Quiénes Somos</a>
+        <a href="sesiones-terapia.html" class="monstruo-button">Sesiones de Terapia</a>
+        <a href="blog.html" class="monstruo-button">Blog de Salud Mental</a>
+        <a href="foro.html" class="monstruo-button">Foro de Autoayuda</a>
+        <a href="test.html" class="monstruo-button">Test de Personalidad</a>
+        <a href="contacto.html" class="monstruo-button">Contacto y Emergencias</a>
+        <a href="mapa.html" class="monstruo-button">Cómo encontrarnos</a>
+        <a href="mailto:ayuda@monstruoterapia.com" class="monstruo-button">Envíanos un correo</a>
+    </nav>
+
+    <main>
+        <section>
+            <form action="#" method="post" aria-label="Formulario de contacto">
+                <h2>📬 Formulario de Contacto</h2>
+
+                <label for="nombre">Nombre del Monstruo:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="correo">Correo de Contacto:</label>
+                <input type="email" id="correo" name="correo" required />
+
+                <label for="tipo">Tipo de Monstruo:</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="" disabled selected>Selecciona un tipo</option>
+                    <option value="vampiro">Vampiro</option>
+                    <option value="hombre-lobo">Hombre Lobo</option>
+                    <option value="fantasma">Fantasma</option>
+                    <option value="otro">Otro</option>
+                </select>
+
+                <!-- Aquí aparecerá el textarea solo si elige "Otro" -->
+                <div id="otroTipoContainer" style="display:none;">
+                    <label for="otroTipo">Por favor, escribe tu tipo de monstruo:</label>
+                    <textarea id="otroTipo" name="otroTipo" placeholder="Escribe aquí tu tipo de monstruo"></textarea>
+                </div>
+
+                <input type="submit" value="Enviar mensaje" />
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;&nbsp;2024&nbsp;Monstruoterapia. Todos los derechos reservados. 👹</p>
+
+    </footer>
+
+    <script>
+        const tipoSelect = document.getElementById('tipo');
+        const otroTipoContainer = document.getElementById('otroTipoContainer');
+
+        tipoSelect.addEventListener('change', function() {
+            if (this.value === 'otro') {
+                otroTipoContainer.style.display = 'block';
+                document.getElementById('otroTipo').setAttribute('required', 'required');
+            } else {
+                otroTipoContainer.style.display = 'none';
+                document.getElementById('otroTipo').removeAttribute('required');
+            }
+        });
+    </script>
+</body>
+</html>

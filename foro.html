@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Monstruoterapia: Foro de Autoayuda</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+        main section {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto 2em auto;
+            padding: 1em;
+            box-sizing: border-box;
+            border-radius: 8px;
+        }
+        table {
+            background-color: #ff5722;
+            color: #fafafa;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table caption {
+            font-size: 1.5em;
+            padding: 0.5em;
+        }
+        table thead {
+            background-color: #e64a19;
+        }
+        table th, table td {
+            padding: 0.75em;
+            border: 1px solid #e64a19;
+        }
+        .info-box {
+            background-color: #e64a19;
+            color: white;
+            min-height: 150px;
+            padding: 1em;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        .info-box h2 {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.50em; /* espacio entre label y textarea */
+            font-weight: bold;
+        }
+        textarea {
+            width: 90%;
+            min-height: 100px;
+            border-radius: 5px;
+            border: none;
+            padding: 0.5em;
+            font-size: 1em;
+            resize: vertical;
+            margin-bottom: 0.5em;
+            margin-top: 0; /* aseguro que no haya margen arriba */
+        }
+        button {
+            background-color: #ff7043;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1em;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>👹 Monstruoterapia: <dfn>Foro</dfn> de Autoayuda</h1>
+        <p><em>Comparte tus experiencias y consejos con otros monstruos.</em></p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="monstruo-button">Inicio</a>
+        <a href="quienes-somos.html" class="monstruo-button">Quiénes Somos</a>
+        <a href="sesiones-terapia.html" class="monstruo-button">Sesiones de Terapia</a>
+        <a href="blog.html" class="monstruo-button">Blog de Salud Mental</a>
+        <a href="foro.html" class="monstruo-button">Foro de Autoayuda</a>
+        <a href="test.html" class="monstruo-button">Test de Personalidad Monstruosa</a>
+        <a href="contacto.html" class="monstruo-button">Contacto y Emergencias</a>
+        <a href="mapa.html" class="monstruo-button">Cómo encontrarnos</a>
+        <a href="mailto:ayuda@monstruoterapia.com" class="monstruo-button">Envíanos un correo</a>
+    </nav>
+
+    <main>
+        <section>
+            <table>
+                <caption>💬 Temas Recientes en el Foro</caption>
+                <thead>
+                    <tr>
+                        <th>Tema</th>
+                        <th>Autor</th>
+                        <th>Última Respuesta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="foro-ansiedad.html" style="color: #fafafa;">Cómo lidiar con la ansiedad nocturna</a></td>
+                        <td>MonstruoLobo</td>
+                        <td>26/05/2024</td>
+                    </tr>
+                    <tr>
+                        <td><a href="foro-autoestima.html" style="color: #fafafa;">Mejorar la autoestima en monstruos</a></td>
+                        <td>Vampira22</td>
+                        <td>20/05/2024</td>
+                    </tr>
+                    <tr>
+                        <td><a href="foro-sueños.html" style="color: #fafafa;">Interpretación de sueños y pesadillas</a></td>
+                        <td>Gorgona</td>
+                        <td>15/05/2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+       <section class="info-box">
+  <h2>¿Quieres compartir algo?</h2>
+  <form onsubmit="vaciarMensaje(event)">
+    <label for="mensaje">Escribe aquí tu mensaje monstruoso:</label>
+    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu experiencia o consejo..."></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<script>
+  function vaciarMensaje(event) {
+    event.preventDefault(); // evita que se recargue la página
+    document.getElementById('mensaje').value = ''; // limpia el textarea
+    alert('¡Tu mensaje monstruoso ha sido enviado! 👹'); // mensaje de confirmación opcional
+  }
+</script>
+    </main>
+
+    <footer>
+        <p>&copy;&nbsp;2024&nbsp;Monstruoterapia. Todos los derechos reservados. 👹</p>
+    </footer>
+</body>
+</html>

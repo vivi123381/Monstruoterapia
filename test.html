@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monstruoterapia: Test de Personalidad</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <style>
+
+    table {
+      width: 100%;
+      background-color: #ff5722;
+      color: #ffffff;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ffffff;
+    }
+    th, td {
+      padding: 1em;
+      text-align: left;
+    }
+    th[colspan="2"] {
+      text-align: center;
+      font-size: 1.5em;
+    }
+    input[type="submit"] {
+      background-color: #e64a19;
+      border: none;
+      color: white;
+      padding: 0.75em 1.5em;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #bf360c;
+    }
+  
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🧠 Test de Personalidad Monstruosa</h1>
+    <p><strong><em>Descubre qué tipo de monstruo eres</em></strong></p>
+  </header>
+
+  <nav>
+    <a href="index.html" class="monstruo-button">Inicio</a>
+    <a href="quienes-somos.html" class="monstruo-button">Quiénes Somos</a>
+    <a href="sesiones-terapia.html" class="monstruo-button">Sesiones de Terapia</a>
+    <a href="blog.html" class="monstruo-button">Blog de Salud Mental</a>
+    <a href="foro.html" class="monstruo-button">Foro de Autoayuda</a>
+    <a href="test.html" class="monstruo-button">Test de Personalidad</a>
+    <a href="contacto.html" class="monstruo-button">Contacto y Emergencias</a>
+    <a href="mapa.html" class="monstruo-button">Cómo encontrarnos</a>
+    <a href="mailto:ayuda@monstruoterapia.com" class="monstruo-button">Envíanos un correo</a>
+  </nav>
+
+  <main>
+    <section>
+      <form onsubmit="enviarTest(event)">
+        <table>
+          <tr>
+            <th colspan="2">🧪 Test de Personalidad Monstruosa</th>
+          </tr>
+          <tr>
+            <td colspan="2">Responde honestamente para descubrir tu verdadera esencia monstruosa:</td>
+          </tr>
+          <tr>
+            <th>1. ¿Qué actividad prefieres?</th>
+            <td>
+              <label><input type="radio" name="q1" value="a"> Cazar bajo la luna</label><br>
+              <label><input type="radio" name="q1" value="b"> Dormir en un ataúd</label><br>
+              <label><input type="radio" name="q1" value="c"> Gritar desde debajo de la cama</label>
+            </td>
+          </tr>
+          <tr>
+            <th>2. ¿Cómo reaccionas ante el estrés?</th>
+            <td>
+              <label><input type="radio" name="q2" value="a"> Aúllo sin control</label><br>
+              <label><input type="radio" name="q2" value="b"> Me encierro en la oscuridad</label><br>
+              <label><input type="radio" name="q2" value="c"> Persigo a alguien</label>
+            </td>
+          </tr>
+          <tr>
+            <th>3. ¿Cuál es tu comida favorita?</th>
+            <td>
+              <label><input type="radio" name="q3" value="a"> Corazones crudos</label><br>
+              <label><input type="radio" name="q3" value="b"> Cerebros hervidos</label><br>
+              <label><input type="radio" name="q3" value="c"> Huesos asados</label>
+            </td>
+          </tr>
+          <tr>
+            <th>4. ¿Qué suena más divertido?</th>
+            <td>
+              <label><input type="radio" name="q4" value="a"> Correr entre los árboles</label><br>
+              <label><input type="radio" name="q4" value="b"> Escribir en sangre antigua</label><br>
+              <label><input type="radio" name="q4" value="c"> Despertar debajo de la cama de alguien</label>
+            </td>
+          </tr>
+          <tr>
+            <th>5. ¿Dónde te sientes más cómodo?</th>
+            <td>
+              <label><input type="radio" name="q5" value="a"> En el bosque oscuro</label><br>
+              <label><input type="radio" name="q5" value="b"> En un castillo abandonado</label><br>
+              <label><input type="radio" name="q5" value="c"> En un armario cerrado</label>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" style="text-align: center;">
+              <input type="submit" value="Enviar respuestas">
+            </td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;&nbsp;2024&nbsp;Monstruoterapia. Todos los derechos reservados. 👹</p>
+
+  </footer>
+
+  <script>
+    function enviarTest(event) {
+      event.preventDefault();
+      alert("¡Gracias por participar en el test monstruoso! 🧠");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!-- curiosidades.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monstruoterapia: Curiosidades</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 2em;
+      display: flex;
+      justify-content: center;
+    }
+
+    #curiosidades {
+      max-width: 800px;
+      width: 100%;
+      background-color: #1e1e1e;
+      padding: 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #ff5722;
+      text-align: center;
+    }
+
+    h2 {
+      color: #ff8a65;
+      margin-top: 1.5em;
+    }
+
+    abbr[title] {
+      border-bottom: 1px dotted #fff;
+      cursor: help;
+    }
+
+    blockquote {
+      border-left: 4px solid #ff5722;
+      margin: 1em auto;
+      padding-left: 1em;
+      font-style: italic;
+      color: #ffccbc;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    cite {
+      display: block;
+      text-align: right;
+      font-weight: bold;
+      color: #ff7043;
+      margin-top: 0.3em;
+    }
+
+    ul, dl {
+      text-align: center;
+      margin: 1em auto;
+      max-width: 600px;
+    }
+
+    dl dt {
+      font-weight: bold;
+      margin-top: 1em;
+    }
+
+    dl dd {
+      margin-left: 1em;
+      margin-bottom: 0.5em;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 1em auto;
+      width: 100%;
+      max-width: 600px;
+      background-color: #ff5722;
+      color: #fff;
+    }
+
+    caption {
+      font-weight: bold;
+      margin-bottom: 0.5em;
+      text-align: center;
+    }
+
+    th, td {
+      border: 1px solid #fff;
+      padding: 0.5em;
+    }
+
+    th {
+      background-color: #e64a19;
+    }
+
+    pre {
+      background-color: #222;
+      color: #ffb74d;
+      padding: 1em;
+      overflow-x: auto;
+      margin: 1.5em auto;
+      max-width: 600px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    form {
+      background-color: #e64a19;
+      padding: 1em;
+      border-radius: 8px;
+      max-width: 600px;
+      margin: 2em auto;
+      color: #fff;
+      text-align: center;
+    }
+
+    form label {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.3em;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+
+    form textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    form input[type="submit"] {
+      margin-top: 1.5em;
+      background-color: #bf360c;
+      border: none;
+      color: white;
+      padding: 0.75em 1.5em;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #9a2c08;
+    }
+
+    #otro-tipo-container {
+      display: none;
+      margin-top: 0.5em;
+    }
+
+    .mapa {
+      margin-top: 2em;
+    }
+
+    .mapa img {
+      border: 2px solid #fff;
+      border-radius: 8px;
+    }
+
+    .boton-salir {
+      margin-top: 2em;
+    }
+
+    .boton-salir a {
+      background-color: #ff5722;
+      color: white;
+      padding: 0.6em 1.2em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 6px #ff5722;
+      display: inline-block;
+    }
+
+    /* Estilo bloque extra para cumplir rúbrica */
+    #extras-html {
+      margin-top: 3em;
+      background-color: #2a2a2a;
+      border: 2px solid #ff5722;
+      border-radius: 10px;
+      padding: 1em;
+      color: #ffccbc;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 0.95em;
+    }
+
+    #extras-html h3 {
+      color: #ff8a65;
+      cursor: pointer;
+      user-select: none;
+      margin-top: 0;
+      margin-bottom: 0.5em;
+    }
+
+    #extras-html div.content {
+      display: none;
+      padding-top: 0.5em;
+    }
+
+    #extras-html p {
+      margin: 0.5em 0;
+    }
+
+    #extras-html img {
+      vertical-align: middle;
+      border: 1px solid #ff5722;
+      margin-left: 0.3em;
+      height: 30px;
+    }
+
+    #extras-html a {
+      color: #ff8a65;
+    }
+
+    #extras-html form {
+      margin-top: 1em;
+      background-color: #ff7043;
+      padding: 1em;
+      border-radius: 6px;
+      color: #fff;
+    }
+
+    #extras-html input[type="file"] {
+      width: 100%;
+      margin-top: 0.5em;
+      padding: 6px;
+      border-radius: 4px;
+      border: none;
+      font-size: 0.9em;
+    }
+
+    #extras-html input[type="submit"] {
+      margin-top: 1em;
+      background-color: #bf360c;
+      border: none;
+      color: white;
+      padding: 0.6em 1em;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 100%;
+    }
+
+    #extras-html input[type="submit"]:hover {
+      background-color: #9a2c08;
+    }
+
+    #extras-html object {
+      margin-top: 1em;
+      width: 100%;
+      max-width: 320px;
+      height: 180px;
+      border: 1px solid #ff5722;
+      border-radius: 6px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<section id="curiosidades">
+  <p>¿Sabías que el <abbr title="Instituto de Monstruos Oficiales">IMO</abbr> afirma que los monstruos tienen su propio lenguaje secreto? Por ejemplo, un simple <em>gruñido</em> puede significar desde “¡Hola!” hasta “¡Cuidado!” dependiendo del contexto.</p>
+
+  <p>Antes usábamos <del>terapia tradicional</del> <ins>monstruoterapia personalizada</ins>.</p>
+
+  <blockquote>
+    “Nunca subestimes el poder del susto bien dado.” 
+    <cite>— Dr. Monstruo, fundador de Monstruoterapia</cite>
+  </blockquote>
+
+  <p>¡Escucha nuestro grito terapéutico!</p>
+  <audio controls>
+    <source src="audio/grito.mp3" type="audio/mpeg">
+    <source src="audio/grito.ogg" type="audio/ogg">
+    Tu navegador no soporta audio incrustado.
+  </audio>
+
+  <h2>Explora el mapa de monstruos</h2>
+  <p>Haz clic en tu monstruo favorito para conocer más sobre él:</p>
+  <div class="mapa">
+    <img src="images/mapa-monstruos.jpg" usemap="#mapaMonstruos" alt="Mapa de monstruos" width="600" height="400" />
+    <map name="mapaMonstruos">
+      <area shape="rect" coords="50,200,150,300" href="vampiro.html" alt="Vampiro" />
+      <area shape="circle" coords="300,250,50" href="hombre-lobo.html" alt="Hombre Lobo" />
+      <area shape="poly" coords="520,200,570,250,550,300,500,250" href="fantasma.html" alt="Fantasma" />
+    </map>
+  </div>
+
+  <h2>Los 3 monstruos más buscados en terapia</h2>
+  <ul>
+    <li>El vampiro melancólico</li>
+    <li>El hombre lobo ansioso</li>
+    <li>El fantasma solitario</li>
+  </ul>
+
+  <h2>Tipos de monstruos y sus hábitos</h2>
+  <dl>
+    <dt>Vampiros</dt>
+    <dd>Les encanta la noche y las historias de terror antiguas.</dd>
+
+    <dt>Hombres Lobo</dt>
+    <dd>Son sociables pero tienen mal genio durante luna llena.</dd>
+
+    <dt>Fantasmas</dt>
+    <dd>Prefieren lugares tranquilos y se comunican con susurros.</dd>
+  </dl>
+
+  <h2>Top actividades monstruosas</h2>
+  <ul>
+    <li>Cazar bajo la luna llena</li>
+    <li>Dormir en ataúdes antiguos</li>
+    <li>Gritar desde debajo de la cama</li>
+  </ul>
+
+  <h2>Características de algunos monstruos</h2>
+  <table summary="Características de monstruos populares">
+    <caption>Monstruos y sus poderes</caption>
+    <thead>
+      <tr>
+        <th scope="col">Monstruo</th>
+        <th scope="col">Poder</th>
+        <th scope="col">Debilidad</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Vampiro</th>
+        <td>Hipnosis</td>
+        <td>Sol y ajo</td>
+      </tr>
+      <tr>
+        <th scope="row">Hombre Lobo</th>
+        <td>Fuerza sobrenatural</td>
+        <td>Luna llena</td>
+      </tr>
+      <tr>
+        <th scope="row" rowspan="2">Fantasma</th>
+        <td>Invisibilidad</td>
+        <td>Campanas</td>
+      </tr>
+      <tr>
+        <td>Telepatía</td>
+        <td>Luz brillante</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><strong>¿Saben cómo asustamos en idioma programador?</strong></p>
+  <pre><code>function asustar() {
+  console.log("¡Buuu!");
+}</code></pre>
+
+  <form action="#" method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8">
+    <label for="nombre">Nombre monstruoso:</label>
+    <input type="text" id="nombre" name="nombre" size="30" maxlength="50" required />
+
+    <label for="correo">Correo:</label>
+    <input type="email" id="correo" name="correo" size="30" maxlength="50" required />
+
+    <label for="tipo">Tipo de monstruo:</label>
+    <select id="tipo" name="tipo" onchange="toggleOtroTipo(this)">
+      <option value="vampiro">Vampiro</option>
+      <option value="hombre-lobo">Hombre Lobo</option>
+      <option value="fantasma">Fantasma</option>
+      <option value="otro">Otro</option>
+    </select>
+
+    <div id="otro-tipo-container">
+      <label for="otro-tipo">Especifica el tipo:</label>
+      <input type="text" id="otro-tipo" name="otro-tipo" maxlength="50" />
+    </div>
+
+    <label for="mensaje">¿Algo que quieras contar?</label>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="40"></textarea>
+
+    <label><input type="checkbox" name="suscrito" checked> ¡Sí, quiero recibir sustos mensuales!</label>
+
+    <input type="submit" value="Unirme al Clan" />
+  </form>
+
+  <div class="boton-salir">
+    <a href="index.html">🔙 Salir al Inicio</a>
+  </div>
+
+  <!-- BLOQUE EXTRA para cumplir con rúbrica -->
+<section id="extras-html">
+  <h3 onclick="toggleExtrasContent()">Elementos y atributos extras requeridos ▼</h3>
+  <div class="content">
+    <p><strong>1. Imagen con atributo <code>border</code>:</strong></p>
+    <p>
+      <img src="images/monstruo.jpg" alt="Monstruo con borde" border="10" style="width: 200px; height: auto;" />
+    </p>
+
+    <p><strong>2. Imagen GIF animada:</strong></p>
+    <p>
+      <img src="images/monstruo-animado.gif" alt="Monstruo animado" style="width: 300px; height: auto;" />
+    </p>
+
+
+      <p><strong>3. Enlace FTP:</strong></p>
+      <p><a href="ftp://ftp.servidor.com/archivo.zip">Descargar archivo FTP</a></p>
+
+      <p><strong>4. Atributo <code>accept</code> en formulario:</strong></p>
+      <form action="#" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+        <label for="archivo">Sube un archivo (solo imágenes PNG/JPG):</label>
+        <input type="file" id="archivo" name="archivo" accept=".png, .jpg, image/png, image/jpeg" />
+        <input type="submit" value="Enviar archivo" />
+      </form>
+
+      <p><strong>5. Elementos multimedia <code>&lt;object&gt;</code> y <code>&lt;embed&gt;</code>:</strong></p>
+      <object data="video/monstruo.mp4" type="video/mp4" width="320" height="180">
+        <embed src="video/monstruo.mp4" type="video/mp4" width="320" height="180" />
+        Tu navegador no soporta este video.
+      </object>
+    </div>
+  </section>
+
+</section>
+
+<script>
+  function toggleOtroTipo(select) {
+    const otroContainer = document.getElementById('otro-tipo-container');
+    otroContainer.style.display = (select.value === 'otro') ? 'block' : 'none';
+  }
+  document.addEventListener('DOMContentLoaded', () => {
+    toggleOtroTipo(document.getElementById('tipo'));
+  });
+
+  function toggleExtrasContent() {
+    const content = document.querySelector('#extras-html .content');
+    if(content.style.display === 'block') {
+      content.style.display = 'none';
+    } else {
+      content.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
